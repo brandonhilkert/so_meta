@@ -18,6 +18,55 @@ Or install it yourself as:
 
 ## Usage
 
+So Meta uses the localization file to provide easy to modify SEO text content for page titles, descriptions and other text content for layouts and views.
+
+```YAML
+# config/locales/en.yml
+
+en:
+  so_meta:
+    defaults:
+      title: "My Awesome New Rails Application"
+      description: "This application will be so viral, your startup
+      friends will be JEALOUS!"
+
+    pages: # This attributes maps to the controller name -
+    PagesController
+      about: # This attribute maps to the controller's action name -
+      about
+        title: "About | My Awesome New Rails Application"
+        description: "Our company will blow your mind...like really."
+
+      contact:
+        title: "Contact %{name} | My Awesome New Rails Application" #
+        Provide interpolation content from the view
+        # By not specifying a description for this page, it'll inherit
+        the defaults
+```
+
+```Erb
+<!-- views/layouts/application.html.erb -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= so_meta(:title) %></title>
+    <meta name="description" content="<%= so_meta(:description) %>" />
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+  </body>
+</html>
+```
+
+```Erb
+<!-- app/views/pages/contact.html.erb -->
+
+<% so_meta_interpolation :title, name: "Brandon" %>
+
+<h1>Contact</h1>
+<p>Contact us now!</p>
+```
 
 ## Contributing
 
