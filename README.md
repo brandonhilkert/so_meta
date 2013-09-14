@@ -1,6 +1,6 @@
-# SoMeta
+# So Meta
 
-TODO: Write a gem description
+So Meta is a gem to simply manage meta content (title, description, canonical url, etc.) from within a Rails application
 
 ## Installation
 
@@ -18,7 +18,6 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
 
 ## Contributing
 

@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = SoMeta::VERSION
   spec.authors       = ["Brandon Hilkert"]
   spec.email         = ["brandonhilkert@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.description   = %q{A gem to simply manage meta content (title, description, canonical url, etc.) from within a Rails application.}
+  spec.summary       = %q{A gem to simply manage meta content (title, description, canonical url, etc.) from within a Rails application.}
+  spec.homepage      = "https://github.com/brandonhilkert/so_meta"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
