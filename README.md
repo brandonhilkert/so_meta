@@ -30,18 +30,14 @@ en:
       description: "This application will be so viral, your startup
       friends will be JEALOUS!"
 
-    pages: # This attributes maps to the controller name -
-    PagesController
-      about: # This attribute maps to the controller's action name -
-      about
+    pages: # Controller name - PagesController
+      about: # Action name - about
         title: "About | My Awesome New Rails Application"
         description: "Our company will blow your mind...like really."
 
       contact:
-        title: "Contact %{name} | My Awesome New Rails Application" #
-        Provide interpolation content from the view
-        # By not specifying a description for this page, it'll inherit
-        the defaults
+        title: "Contact %{name} | My Awesome New Rails Application" # Interpolation content from the view
+        # By not specifying a description for this page, it'll inherit the defaults
 ```
 
 ```Erb
