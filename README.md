@@ -35,9 +35,9 @@ en:
         title: "About | My Awesome New Rails Application"
         description: "Our company will blow your mind...like really."
 
-      contact:
-        title: "Contact %{name} | My Awesome New Rails Application" # Interpolation content from the view
-        # By not specifying a description for this page, it'll inherit the defaults
+    contact:
+      title: "Contact %{name} | My Awesome New Rails Application" # Interpolation content from the view
+      # By not specifying a description for this page, it'll inherit the defaults
 ```
 
 ```Erb
