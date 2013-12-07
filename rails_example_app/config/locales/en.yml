@@ -20,4 +20,16 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  so_meta:
+    defaults:
+      title: Default
+      description: This application will be so viral, your startup friends will be JEALOUS!
+
+    pages:
+      about:
+        title: About
+        description: Our company will blow your mind...like really.
+
+      profile:
+        title: Profile - %{name}
+        description: %{name}'s profile
