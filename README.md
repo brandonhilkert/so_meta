@@ -40,9 +40,6 @@ en:
         title: "About | My Awesome New Rails Application"
         description: "Our company will blow your mind...like really."
 
-        iphone:
-          title: "iPhone About | My Awesome New Rails Application"
-
     contact:
       title: "Contact %{name} | My Awesome New Rails Application" # Interpolation content from the view
       # By not specifying a description for this page, it'll inherit the defaults
@@ -54,7 +51,7 @@ en:
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title><%= so_meta(:title, :iphone) %></title>
+    <title><%= so_meta(:title) %></title>
     <meta name="description" content="<%= so_meta(:description) %>" />
     <%= csrf_meta_tags %>
   </head>
