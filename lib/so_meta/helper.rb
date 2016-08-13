@@ -1,6 +1,6 @@
 module SoMeta
   module Helper
-    def so_meta(name)
+    def so_meta(name, scope = nil)
       interpolation_data = instance_variable_get("@so_meta_#{name}_interpolation") || {}
       t("so_meta.#{controller_path.gsub(/\//, "_")}.#{action_name}.#{name}", interpolation_data.merge(default: t("so_meta.defaults.#{name}")))
     end

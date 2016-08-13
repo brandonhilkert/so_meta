@@ -35,7 +35,7 @@ en:
         title: "About | My Awesome New Rails Application"
         description: "Our company will blow your mind...like really."
 
-    pages-subresource: # Controller name - Pages::SubresourceController
+    pages_subresource: # Controller name - Pages::SubresourceController
       about: # Action name - about
         title: "About | My Awesome New Rails Application"
         description: "Our company will blow your mind...like really."
