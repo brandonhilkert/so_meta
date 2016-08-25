@@ -1,5 +1,3 @@
-require 'pry'
-
 module SoMeta
   module Helper
     def so_meta(name, scope = nil)
