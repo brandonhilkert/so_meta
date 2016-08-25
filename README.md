@@ -69,6 +69,34 @@ en:
 <p>Contact us now!</p>
 ```
 
+### Usage with scoping
+
+```Erb
+<title><%= so_meta(:title, :phone) %></title>
+```
+
+```YAML
+# config/locales/en.yml
+
+en:
+  so_meta:
+    defaults:
+      title: "My Awesome New Rails Application"
+      description: "This application will be so viral, your startup
+      friends will be JEALOUS!"
+
+    pages: # Controller name - PagesController
+      about: # Action name - about
+        title: "About | My Awesome New Rails Application"
+        description: "Our company will blow your mind...like really."
+
+        phone:
+          title: "Specific title for phone" # will choose this if the scope
+          matches
+```
+
+
+
 ## Contributing
 
 1. Fork it
