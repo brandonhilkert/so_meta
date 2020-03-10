@@ -7,7 +7,7 @@ module SoMeta
 
       if scope.present?
         begin
-          return I18n.translate!("#{request_key}.#{scope}.#{name}")
+          return I18n.translate!("#{request_key}.#{scope}.#{name}", interpolation_data)
         rescue I18n::MissingTranslationData
           nil
         end
