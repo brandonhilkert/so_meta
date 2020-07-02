@@ -17,7 +17,9 @@ module SoMeta
     end
 
     def so_meta_interpolation(name, hash)
-      instance_variable_set("@so_meta_#{name}_interpolation", hash)
+      variable_name = "@so_meta_#{name}_interpolation"
+      interpolation = instance_variable_get(variable_name) || {}
+      instance_variable_set(variable_name, interpolation.merge(hash))
     end
   end
 end
