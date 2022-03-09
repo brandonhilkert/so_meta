@@ -7,13 +7,13 @@ module SoMeta
 
       if scope.present?
         begin
-          return I18n.translate!("#{request_key}.#{scope}.#{name}", interpolation_data)
+          return I18n.translate!("#{request_key}.#{scope}.#{name}", **interpolation_data)
         rescue I18n::MissingTranslationData
           nil
         end
       end
 
-      t("#{request_key}.#{name}", interpolation_data.merge(default: t("so_meta.defaults.#{name}")))
+      t("#{request_key}.#{name}", **interpolation_data.merge(default: t("so_meta.defaults.#{name}")))
     end
 
     def so_meta_interpolation(name, hash)
